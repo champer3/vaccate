@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 3.6rem;
+}
+
+li,label,button,input,p{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+h4,h5{
+    font-size: 3rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    padding: 1.5rem 6rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /*animation: cloudAnimation 3s infinite alternate;*/
+}
+
+button:hover{
+    background: #1c293a;
+}
+
+/* nav with hero*/
+
+.main-head{
+    background: #131c27;
+    color: white;
+}
+
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    min-height: 6vh;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+nav ul{
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#logo{
+    flex: 3 1 40rem;
+    text-align: center;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.hero{
+    min-height: 94vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent) ,url("/img/landing-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3{
+    padding: 3rem;
+}
+
+/* Benefit Section */
+
+#locations{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url(/img/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-head{
+    width: 90%;
+    margin: auto;
+    margin-top: 160px;
+}
+
+.locations-head h2{
+    font-weight: bolder;
+    padding: 1rem 0px;
+    text-decoration: underline;
+}
+.locations-head h3{
+    padding: 4rem 0px;
+}
+
+.cloud{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 600px;
+    height: 300px;
+    pointer-events: none;
+}
+
+.moving-cloud-1{
+    z-index: 2;
+    animation: cloudAnimation 3s infinite alternate;
+}
+
+.moving-cloud-2{
+    top: 20%;
+    opacity: 0.45;
+    animation: cloudAnimation 4s infinite alternate;
+}
+
+@keyframes cloudAnimation {
+    from{
+        transform: translate(10%, -10%);
+    }
+    to{
+        transform: translate(0%, 0%);
+    }
+}
+
+.benefits-head{
+    background: #343c44;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    min-height: 30vh;
+    padding: 3rem;
+}
+
+.benefits-head h4{
+    padding: 3rem;
+}
+
+.cards{
+    display: flex;
+}
+
+.card{
+    background: tomato;
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+}
+
+.cards img{
+    height: 100px;
+}
+
+@media screen and (max-height: 932px) {
+    html{
+        font-size: 40%;
+    }
+    nav{
+        text-align: center;
+    }
+    #logo{
+        padding: 1rem;
+    }
+    .moving-cloud-1{
+        z-index: 1;
+    }
+    .moving-cloud-2{
+        z-index: 0;
+    }
+    .locations-head h3{
+        background: #131c27;
+        color: white;
+        opacity: 0.8;
+    }
+    
+} 
